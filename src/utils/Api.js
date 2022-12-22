@@ -19,3 +19,10 @@ export const getCharacterFromApi = async () => {
 
   return res.results
 }
+
+export const getCharacterByNameFromApi = async (name) => {
+  const req = await fetch(`https://rickandmortyapi.com/api/character/?name=${name}`)
+  const res = await req.json()
+
+  return res.results
+}

@@ -6,6 +6,7 @@ const ListOfCharacter = async (firstParam, secondParam) => {
     const results = res.map((element) => ({
         name: element.name,
         src: element.image,
+        url: element.url,
     }))
     return ListCharacter(results)
     }

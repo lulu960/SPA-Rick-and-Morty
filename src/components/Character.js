@@ -1,18 +1,21 @@
 import createElement from "../utils/createElement";
 
-const Card = ({ name, src, tagName = 'div' } = {}) => createElement(
+const Card = ({ url,name, src, tagName = 'div' } = {}) => createElement(
     {
       tagName,
       children: [
         {
-          tagName: 'img',
-          attributes: {
-            src: src || 'https://via.placeholder.com/150'
-          }
+            tagName: 'a',
+            attributes: {
+                href: url,
+            },
+            text: name,
         },
         {
-          tagName: 'p',
-          name,
+          tagName: 'img',
+          attributes: {
+            src: src
+          }
         },
       ]
     }
