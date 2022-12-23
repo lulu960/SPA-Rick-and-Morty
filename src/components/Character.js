@@ -1,14 +1,11 @@
 import createElement from "../utils/createElement";
 
-const Card = ({ url,name, src, tagName = 'div' } = {}) => createElement(
+const Card = ({ id,name, src, tagName = 'div' } = {}) => createElement(
     {
       tagName,
       children: [
         {
-            tagName: 'a',
-            attributes: {
-                href: url,
-            },
+            tagName: 'h2',
             text: name,
         },
         {
@@ -17,6 +14,14 @@ const Card = ({ url,name, src, tagName = 'div' } = {}) => createElement(
             src: src
           }
         },
+        {
+          tagName: 'button',
+          attributes: {
+            'data-tabId': "link"+id,
+            'id': "link"+id,
+          },
+          text: 'en savoir plus',
+      },
       ]
     }
   )

@@ -1,4 +1,4 @@
-import  Character  from "./Character";
+import  Character  from "./Character";;
 
 export default function ListCharacter(arrayOfCharacter) {
     const template = document.querySelector('#listOfElement')

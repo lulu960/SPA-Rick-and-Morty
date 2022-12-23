@@ -7,6 +7,7 @@ const ListOfCharacter = async (firstParam, secondParam) => {
         name: element.name,
         src: element.image,
         url: element.url,
+        id: element.id,
     }))
     return ListCharacter(results)
     }
