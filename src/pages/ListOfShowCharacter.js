@@ -3,9 +3,10 @@ import { getCharacterByIdFromApi } from "../utils/Api"
 
 const ListOfCharacter = async (firstParam, secondParam) => {
     event.preventDefault()
-    const id = document.querySelectorAll('#value').value
+    const id = firstParam
     console.log(id)
     const res = await getCharacterByIdFromApi(id)
+    console.log(res)
     const results = res.map((element) => ({
         name: element.name,
         status: element.status,
@@ -17,6 +18,7 @@ const ListOfCharacter = async (firstParam, secondParam) => {
         locationUrl: element.location.url,
         src: element.image,
     }))
+    console.log(results)
     return ListCharacter(results)
     }
 

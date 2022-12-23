@@ -1,6 +1,6 @@
 import createElement from "../utils/createElement";
 
-const Card = ({ id,name, src, tagName = 'div' } = {}) => createElement(
+const Card = ({ url, id,name, src, tagName = 'div' } = {}) => createElement(
     {
       tagName,
       attributes: {
@@ -20,8 +20,10 @@ const Card = ({ id,name, src, tagName = 'div' } = {}) => createElement(
         {
           tagName: 'button',
           attributes: {
-            'data-tabId': "link"+id,
-            'id': "link"+id,
+            'data-tabId': "link",
+            'id': id,
+            'class': 'button',
+            'url' : url
           },
           text: 'Fiche personnage',
       },

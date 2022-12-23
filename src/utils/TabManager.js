@@ -4,7 +4,7 @@ class TabManager {
     this.componentMapping = componentMapping
   }
 
-  async openTabById(id) {
+  async openTabById(id, ...props) {
     if (id in this.componentMapping) {
       const { component, params: [...props] } = this.componentMapping[id]
       const Component = await component(...props)
