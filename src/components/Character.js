@@ -3,6 +3,9 @@ import createElement from "../utils/createElement";
 const Card = ({ id,name, src, tagName = 'div' } = {}) => createElement(
     {
       tagName,
+      attributes: {
+        class: 'perso',
+      },
       children: [
         {
             tagName: 'h2',
@@ -20,7 +23,7 @@ const Card = ({ id,name, src, tagName = 'div' } = {}) => createElement(
             'data-tabId': "link"+id,
             'id': "link"+id,
           },
-          text: 'en savoir plus',
+          text: 'Fiche personnage',
       },
       ]
     }
