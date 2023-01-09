@@ -3,6 +3,7 @@ import { getCharacterByIdFromApi } from "../utils/Api"
 
 const ListOfCharacter = async (firstParam, secondParam) => {
     event.preventDefault()
+   let tab = {}
     const id = firstParam
     console.log(id)
     const res = await getCharacterByIdFromApi(id)
